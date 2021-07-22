@@ -2,7 +2,9 @@ import songService from "../Services/SongsService.js";
 
 //Private
 /**Draws the Search results to the page */
-function _drawResults() { }
+function _drawResults() {
+  
+}
 
 /**Draws the Users saved songs to the page */
 function _drawPlaylist() { }
