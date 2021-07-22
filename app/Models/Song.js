@@ -29,11 +29,12 @@ export default class Song {
 
   get playlistTemplate() {
     return `
+  
       <div class="card text-dark ">
         <div class="row">
-            <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers" alt="...">
+           <div> <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers" alt="..."></div>
             <div class="card-body">
-                <h5 class="card-title">${this.artist}</h5>
+                <p class="card-title"><b>${this.artist}</b></p>
                 <p class="card-text">${this.album}</p>
             </div>
         </div>
