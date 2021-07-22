@@ -10699,4 +10699,13 @@ main {
   max-width: 100px;
 }
 
+.activeCover {
+  max-width: 225px;
+}
+
+.side-bar-scroll {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -22,31 +22,44 @@
             <div class="col-3 bg-dark vh-100">
                 <form onsubmit="app.songsController.search(event)">
                     <input type="text" class="form-control my-2" name="query" placeholder="Search For Music" />
-                    <button class="btn btn-success my-2 form-control" type="submit">
+                    <button class="btn btn-success my-2 form-control" onclick="app.songsController.search()" type="submit">
                         Search
                     </button>
                 </form>    
                 <div class="row  ">
-                    <div class="col mb-4">
-                        <div class="card ">
-                            <div class="row">
-                            <img src="assets/img/cover.jpg/" class="card-img-left ml-4 my-2 covers" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Band Name</h5>
-                                    <p class="card-text">Album Name</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col mb-4 side-bar-scroll "id="searched">
+                        <!-- Template for Search Area -->
                     </div>
-
-
-
-
                 </div>
             </div>
             
-            <div class="col-6">Now Playing</div>
-            <div class="col-3 bg-dark">My Music</div>
+            <div class="col-6">
+                <div class="row justify-content-center">
+                    <div class="col text-center" >
+                        <div>Now Playing</div>
+                        <div><img src="assets/img/cover.jpg/" class=" activeCover"alt=""></div>
+                        <div>Band/Album</div>
+                        <div>Album: NAME | Buy Now $$$</div>
+                        <div>Playing</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-3 bg-dark  text-center">
+                <h1 class="text-light side-bar-scroll" id="playlist">My Music</h1>
+                <!-- <div class="card ">
+                    <div class="row">
+                        <img src="assets/img/cover.jpg/" class="card-img-left ml-4 my-2 covers" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Band Name</h5>
+                            <p class="card-text">Album Name</p>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
             
         </div>
 

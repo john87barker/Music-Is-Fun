@@ -7,17 +7,37 @@ export default class Song {
     this.album = data.collectionName || data.album;
     this.price = data.trackPrice || data.price;
     this.preview = data.previewUrl || data.preview;
-    this._id = data.trackId || data._id;
+    this.id = data.trackId || data._id;
   }
 
   get Template() {
     return `
+      <div class="card ">
+          <div class="row">
+          <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers" alt="${this.album}">
+              <div class="card-body">
+                  <h5 class="card-title">${this.artist}</h5>
+                  <p class="card-text">${this.album}</p>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="app.songsController.addSong('${this.id}')">+</button>
+          </div>
+      </div>
+
 
         `;
   }
 
   get playlistTemplate() {
     return `
+      <div class="card text-dark ">
+        <div class="row">
+            <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${this.artist}</h5>
+                <p class="card-text">${this.album}</p>
+            </div>
+        </div>
+      </div>
 
         `;
   }
