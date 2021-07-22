@@ -49,8 +49,13 @@ class SongsService {
    * Afterwords it will update the store to reflect saved info
    * @param {string} id
    */
-  removeSong(id) {
+  async removeSong(id) {
     //TODO Send the id to be deleted from the server then update the store
+    console.log(id)
+    const res = await sandBoxApi.delete('/'+ id)
+    console.log(res.data)
+    ProxyState.playlist = ProxyState.playlist.filter(p => p.id != id)
+    // ProxyState.playlist = ProxyState.playlist
   }
 }
 

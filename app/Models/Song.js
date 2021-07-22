@@ -19,8 +19,8 @@ export default class Song {
                   <h5 class="card-title">${this.artist}</h5>
                   <p class="card-text">${this.album}</p>
               </div>
-              <button type="button" class="btn btn-primary" onclick="app.songsController.addSong('${this.id}')">+</button>
-          </div>
+            </div>
+          <button type="button" class="btn btn-primary" onclick="app.songsController.addSong('${this.id}')">+</button>
       </div>
 
 
@@ -38,8 +38,8 @@ export default class Song {
                 <p class="card-text">${this.album}</p>
             </div>
         </div>
+        <button type="button" class="btn btn-warning" onclick="app.songsController.removeSong('${this.id}')">X</button>
       </div>
-
         `;
   }
 }
