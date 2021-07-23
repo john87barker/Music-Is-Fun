@@ -12,15 +12,15 @@ export default class Song {
 
   get Template() {
     return `
-      <div class="card ">
+      <div class="card text-dark bg-info">
           <div class="row">
-          <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers" alt="${this.album}">
+          <img src="${this.albumArt}" class="card-img-left ml-4 my-2 covers " alt="${this.album}">
               <div class="card-body">
                   <h5 class="card-title">${this.artist}</h5>
                   <p class="card-text">${this.album}</p>
               </div>
             </div>
-          <button type="button" class="btn btn-primary" onclick="app.songsController.addSong('${this.id}')">+</button>
+          <button type="button" class="btn btn-secondary btn-lg" onclick="app.songsController.addSong('${this.id}')">+</button>
       </div>
 
 
@@ -38,7 +38,7 @@ export default class Song {
                 <p class="card-text">${this.album}</p>
             </div>
         </div>
-        <button type="button" class="btn btn-warning" onclick="app.songsController.removeSong('${this.id}')">X</button>
+        <button type="button" class="btn btn-danger" onclick="app.songsController.removeSong('${this.id}')">X</button>
       </div>
         `;
   }
